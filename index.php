@@ -88,7 +88,7 @@ class User {
 
   public $adress;
 
-  public $creditCard;
+  private $creditCard;
 
   private $password;
 
@@ -140,13 +140,14 @@ var_dump($firstPasta);
 $firstPasta->setTypology('spaghetti');
 $firstPasta->setPrice(1.5);
 $firstPasta->setQuantity(2);
+$firstPasta->getTotalPrice();
 var_dump($firstPasta);
 
 //Creazione oggetto/istanza di classe User
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, (removed:int $creditCard), string $password
 $firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 'at568bcdudi', $firstPasta);
-var_dump($firstUser);
 $firstUser->setCreditCard(8822907688423333);
+var_dump($firstUser);
 
 // echo 'CIAO';
-echo 'Pagamento: ' . $firstPasta->getTotalPrice() . 'euro';
+// echo 'Pagamento: ' . $firstPasta->getTotalPrice() . 'euro';
