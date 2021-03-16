@@ -7,7 +7,7 @@ class Product {
 
   public $department;
 
-  public function __construct($id, $department) {
+  public function __construct(int $id, string $department) {
     $this->id = $id;
     $this->department = $department;
   }
@@ -57,15 +57,16 @@ class User {
 
   private $creditCard;
 
-  protected $password;
+  private $password;
 
-  public function __construct(string $name, string $surname, $email, int $phone, $adress, $creditCard, $password) {
+  public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password) {
     $this->name = $name;
     $this->surname = $surname;
     $this->email = $email;
     $this->phone = $phone;
     $this->adress = $adress;
     $this->creditCard = $creditCard;
+    $this->password = $password;
   }
 
   //getter
@@ -94,3 +95,12 @@ class User {
     }
 
 }
+
+// public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password)
+
+//Creazione oggetto/istanza di classe User
+
+$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi');
+var_dump($firstUser);
+
+// echo 'CIAO';
