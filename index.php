@@ -5,14 +5,21 @@ class Product {
 
   public $department;
 
+  public $quality;
 
-  public function __construct(string $department) {
+
+  public function __construct(string $department, string $quality) {
     $this->department = $department;
+    $this->quality = $quality;
   }
 
   //getter
   public function getDepartment() {
     return $this->department;
+  }
+
+  public function getQuality() {
+    return $this->quality;
   }
 
 
@@ -103,7 +110,7 @@ class User {
 
 //Creazione oggetto/istanza di classe Pasta
 // public function __construct(int $id, string $department)
-$firstPasta = new Pasta('food');
+$firstPasta = new Pasta('food', 'fresco');
 var_dump($firstPasta);
 $firstPasta->setTypology('spaghetti');
 var_dump($firstPasta);
