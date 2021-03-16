@@ -5,11 +5,11 @@ class Product {
 
   public $id;
 
-  public $department;
+  public $product;
 
-  public function __construct(int $id, string $department) {
+  public function __construct(int $id, string $product) {
     $this->id = $id;
-    $this->department = $department;
+    $this->product = $product;
   }
 
   //getter
@@ -18,7 +18,7 @@ class Product {
   }
 
   public function getSurname() {
-    return $this->department;
+    return $this->product;
   }
 
 
@@ -29,8 +29,14 @@ class Product {
 //Children Classes
 class Food extends Product {
 
+  // public $pasta;
+
+//setter
+  // public function setPasta($pasta) {
+  //   $this->pasta = $pasta;
+// }
 }
-// var_dump(Food);
+var_dump(Food);
 
 // class Hygiene extends Product {
 //
@@ -99,12 +105,13 @@ class User {
 
 }
 
-//Creazione oggetto/istanza di classe array_product
-// public function __construct(int $id, string $department)
-$firstProduct = new Product(32, 'food');
+//Creazione oggetto/istanza di classe Product
+// public function __construct(int $id, string $product)
+$firstProduct = new Product(32, 'pasta');
 var_dump($firstProduct);
 
 
+// $firstUser->setPasta('spaghetti');
 
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password)
 
@@ -112,6 +119,6 @@ var_dump($firstProduct);
 
 $firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstProduct);
 var_dump($firstUser);
-echo $firstUser->getPhone();
+// echo $firstUser->getPhone();
 
 // echo 'CIAO';
