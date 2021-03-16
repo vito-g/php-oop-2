@@ -135,18 +135,21 @@ class User {
 
 //Creazione oggetto/istanza di classe Pasta
 // public function __construct(string $department, string $quality)
+echo '<b> Oggetto di Classe Pasta prima del setting degli attributi: </b>';
 $firstPasta = new Pasta('food', 'fresco');
 var_dump($firstPasta);
 $firstPasta->setTypology('spaghetti');
 $firstPasta->setPrice(1.5);
 $firstPasta->setQuantity(2);
 $firstPasta->getTotalPrice();
+echo '<br><b> Oggetto di Classe Pasta dopo il setting degli attributi: </b>';
 var_dump($firstPasta);
 
 //Creazione oggetto/istanza di classe User
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, (removed:int $creditCard), string $password
 $firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 'at568bcdudi', $firstPasta);
 $firstUser->setCreditCard(8822907688423333);
+echo '<br><b> Oggetto di Classe User dopo il setting dell\' attributo \'creditCard\': </b>';
 var_dump($firstUser);
 
 // echo 'CIAO';
