@@ -32,13 +32,13 @@ class Food extends Product {
 }
 // var_dump(Food);
 
-class Hygiene extends Product {
-
-}
-
-class Stationery extends Product {
-
-}
+// class Hygiene extends Product {
+//
+// }
+//
+// class Stationery extends Product {
+//
+// }
 //End Children Classes
 
 
@@ -59,7 +59,9 @@ class User {
 
   private $password;
 
-  public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password) {
+  public $product;
+
+  public function __construct(string $name, string $surname, string $email, float $phone, string $adress, float $creditCard, string $password, Product $product) {
     $this->name = $name;
     $this->surname = $surname;
     $this->email = $email;
@@ -67,6 +69,7 @@ class User {
     $this->adress = $adress;
     $this->creditCard = $creditCard;
     $this->password = $password;
+    $this->product = $product;
   }
 
   //getter
@@ -96,11 +99,19 @@ class User {
 
 }
 
+//Creazione oggetto/istanza di classe array_product
+// public function __construct(int $id, string $department)
+$firstProduct = new Product(32, 'food');
+var_dump($firstProduct);
+
+
+
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password)
 
 //Creazione oggetto/istanza di classe User
 
-$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi');
+$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstProduct);
 var_dump($firstUser);
+echo $firstUser->getPhone();
 
 // echo 'CIAO';
