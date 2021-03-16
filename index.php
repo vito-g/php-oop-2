@@ -21,7 +21,7 @@ class Product {
 //End Parent Class
 
 //Children Classes
-class Food extends Product {
+class Pasta extends Product {
 
   public $typology;
 
@@ -101,12 +101,12 @@ class User {
 
 }
 
-//Creazione oggetto/istanza di classe Food
+//Creazione oggetto/istanza di classe Pasta
 // public function __construct(int $id, string $department)
-$firstFood = new Food('food');
-var_dump($firstFood);
-$firstFood->setTypology('spaghetti');
-var_dump($firstFood);
+$firstPasta = new Pasta('food');
+var_dump($firstPasta);
+$firstPasta->setTypology('spaghetti');
+var_dump($firstPasta);
 
 
 
@@ -116,7 +116,7 @@ var_dump($firstFood);
 
 //Creazione oggetto/istanza di classe User
 
-$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstFood);
+$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstPasta);
 var_dump($firstUser);
 // echo $firstUser->getPhone();
 
