@@ -108,7 +108,7 @@ class User {
 
 }
 
-//Creazione oggetto/istanza di classe Product
+//Creazione oggetto/istanza di classe Food
 // public function __construct(int $id, string $department)
 $firstFood = new Food(32, 'food');
 var_dump($firstFood);
