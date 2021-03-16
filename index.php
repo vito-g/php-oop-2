@@ -7,6 +7,8 @@ class Product {
 
   public $quality;
 
+  protected $price = 1; //euro
+
 
   public function __construct(string $department, string $quality) {
     $this->department = $department;
@@ -32,9 +34,21 @@ class Pasta extends Product {
 
   public $typology;
 
+  protected $price;
+
+  protected $quantity;
+
 // setter
   public function setTypology($typology) {
     $this->typology = $typology;
+}
+
+  public function setPrice($price) {
+    $this->price = $price;
+}
+
+  public function setQuantity($quantity) {
+    $this->quantity = $quantity;
 }
 }
 
@@ -110,9 +124,11 @@ class User {
 
 //Creazione oggetto/istanza di classe Pasta
 // public function __construct(int $id, string $department)
-$firstPasta = new Pasta('food', 'fresco');
+$firstPasta = new Pasta('food', 'fresco', 1.5);
 var_dump($firstPasta);
 $firstPasta->setTypology('spaghetti');
+$firstPasta->setPrice(1.5);
+$firstPasta->setQuantity(2);
 var_dump($firstPasta);
 
 
