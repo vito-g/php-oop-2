@@ -14,11 +14,11 @@ class Product {
 
   //getter
   public function getName() {
-    return this->id;
+    return $this->id;
   }
 
   public function getSurname() {
-    return this->department;
+    return $this->department;
   }
 
 
@@ -30,6 +30,7 @@ class Product {
 class Food extends Product {
 
 }
+// var_dump(Food);
 
 class Hygiene extends Product {
 
@@ -69,27 +70,27 @@ class User {
 
   //getter
     public function getName() {
-      return this->name;
+      return $this->name;
     }
 
     public function getSurname() {
-      return this->surname;
+      return $this->surname;
     }
 
     public function getEmail() {
-      return this->email;
+      return $this->email;
     }
 
     public function getPhone() {
-      return this->phone;
+      return $this->phone;
     }
 
     public function getAdress() {
-      return this->adress;
+      return $this->adress;
     }
 
     public function getCreditCard() {
-      return this->creditCard;
+      return $this->creditCard;
     }
 
 }
