@@ -3,21 +3,14 @@
 //Parent Class
 class Product {
 
-  public $id;
-
   public $department;
 
 
-  public function __construct(int $id, string $department) {
-    $this->id = $id;
+  public function __construct(string $department) {
     $this->department = $department;
   }
 
   //getter
-  public function getId() {
-    return $this->id;
-  }
-
   public function getDepartment() {
     return $this->department;
   }
@@ -110,7 +103,7 @@ class User {
 
 //Creazione oggetto/istanza di classe Food
 // public function __construct(int $id, string $department)
-$firstFood = new Food(32, 'food');
+$firstFood = new Food('food');
 var_dump($firstFood);
 $firstFood->setTypology('spaghetti');
 var_dump($firstFood);
