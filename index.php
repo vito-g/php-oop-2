@@ -5,20 +5,21 @@ class Product {
 
   public $id;
 
-  public $product;
+  public $department;
 
-  public function __construct(int $id, string $product) {
+
+  public function __construct(int $id, string $department) {
     $this->id = $id;
-    $this->product = $product;
+    $this->department = $department;
   }
 
   //getter
-  public function getName() {
+  public function getId() {
     return $this->id;
   }
 
-  public function getSurname() {
-    return $this->product;
+  public function getDepartment() {
+    return $this->department;
   }
 
 
@@ -29,14 +30,16 @@ class Product {
 //Children Classes
 class Food extends Product {
 
-  // public $pasta;
+  public $typology;
 
-//setter
-  // public function setPasta($pasta) {
-  //   $this->pasta = $pasta;
-// }
+// setter
+  public function setTypology($typology) {
+    $this->typology = $typology;
 }
-var_dump(Food);
+}
+
+
+
 
 // class Hygiene extends Product {
 //
@@ -106,18 +109,21 @@ class User {
 }
 
 //Creazione oggetto/istanza di classe Product
-// public function __construct(int $id, string $product)
-$firstProduct = new Product(32, 'pasta');
-var_dump($firstProduct);
+// public function __construct(int $id, string $department)
+$firstFood = new Food(32, 'food');
+var_dump($firstFood);
+$firstFood->setTypology('spaghetti');
+var_dump($firstFood);
 
 
-// $firstUser->setPasta('spaghetti');
+
+
 
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password)
 
 //Creazione oggetto/istanza di classe User
 
-$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstProduct);
+$firstUser = new User('Andrea', 'De Candia', 'andrea.decandia@gmail.com', 3330078843, 'via Caronte 100 - 70022 Altamura', 5622907688425761, 'at568bcdudi', $firstFood);
 var_dump($firstUser);
 // echo $firstUser->getPhone();
 
