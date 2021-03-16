@@ -36,7 +36,16 @@ class Pasta extends Product {
 
   protected $price;
 
-  protected $quantity;
+  public $quantity;
+
+//getter
+  public function getTotalPrice(){
+    if ($this->quantity > 1) {
+      return $this->price = $this->price * $this->quantity;
+    }
+  }
+
+  // public $totalPrice = $this->price * $this->quantity;
 
 // setter
   public function setTypology($typology) {
@@ -131,10 +140,6 @@ $firstPasta->setPrice(1.5);
 $firstPasta->setQuantity(2);
 var_dump($firstPasta);
 
-
-
-
-
 // public function __construct(string $name, string $surname, string $email, int $phone, string $adress, int $creditCard, string $password)
 
 //Creazione oggetto/istanza di classe User
@@ -144,3 +149,4 @@ var_dump($firstUser);
 // echo $firstUser->getPhone();
 
 // echo 'CIAO';
+echo 'Pagamento: ' . $firstPasta->getTotalPrice() . 'euro';
