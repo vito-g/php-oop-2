@@ -5,6 +5,24 @@ class Product {
 
   public $id;
 
+  public $department;
+
+  public function __construct($id, $department) {
+    $this->id = $id;
+    $this->department = $department;
+  }
+
+  //getter
+  public function getName() {
+    return this->id;
+  }
+
+  public function getSurname() {
+    return this->department;
+  }
+
+
+
 }
 //End Parent Class
 
@@ -53,18 +71,23 @@ class User {
     public function getName() {
       return this->name;
     }
+
     public function getSurname() {
       return this->surname;
     }
+
     public function getEmail() {
       return this->email;
     }
+
     public function getPhone() {
       return this->phone;
     }
+
     public function getAdress() {
       return this->adress;
     }
+
     public function getCreditCard() {
       return this->creditCard;
     }
