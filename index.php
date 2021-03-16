@@ -38,7 +38,9 @@ class User {
 
   private $creditCard;
 
-  public function __construct(string $name, string $surname, $email, int $phone, $adress, $creditCard) {
+  protected $password;
+
+  public function __construct(string $name, string $surname, $email, int $phone, $adress, $creditCard, $password) {
     $this->name = $name;
     $this->surname = $surname;
     $this->email = $email;
